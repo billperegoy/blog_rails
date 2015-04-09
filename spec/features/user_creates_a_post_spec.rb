@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 feature "user create a post" do
+  include Features::PostHelpers
+
   scenario "with valid data" do
     create_post(title: "My First Blog Post", body: "This is the text for my first post.")
 
